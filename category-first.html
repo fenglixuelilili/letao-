@@ -8,7 +8,9 @@
 	<link rel="stylesheet" href="css/system.css">
 	<script src="assets/jquery/jquery.min.js"></script>
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/template.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/firstcate.js"></script>
 </head>
 <body>
 	<div class="system">
@@ -71,18 +73,22 @@
 	        <div class="body">
 	        	<button class="operation btn btn-primary" data-toggle="modal" data-target=".category-first">添加分类</button>
 	        	<table class="table table-bordered">
-	        		<tr>
-	        			<th>分类的编号</th>
-	        			<th>分类名称</th>
-	        		</tr>
-	        		<tr>
-	        			<td>1</td>
-	        			<td>运动馆</td>
-	        		</tr>
+					<tbody id='tbody'>
+							<tr>
+									<th>分类的编号</th>
+									<th>分类名称</th>
+								</tr>
+								
+								<tr>
+									<td>1</td>
+									<td>运动馆</td>
+								</tr>
+					</tbody>
+	        		
 	        	</table>
 	        	<div class="btn-group page">
-	        		<div class="btn btn-default">上一页</div>
-	        		<div class="btn btn-default">下一页</div>
+	        		<div class="btn btn-default" id='down'>上一页</div>
+	        		<div class="btn btn-default" id='up'>下一页</div>
 	        	</div>
 	        </div>
 		</div>
@@ -97,12 +103,12 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="请输入分类的名称">
+						<input type="text" class="form-control" id='text' placeholder="请输入分类的名称">
 					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary">保存</button>
+					<button type="button" class="btn btn-primary" id="cun">保存</button>
 				</div>
 			</div>
 		</div>
